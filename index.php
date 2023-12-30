@@ -47,6 +47,7 @@
     </form>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin3.min.js'></script><script  src="./script.js"></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin3.min.js'></script>
+<script  src="birthday\script.js"></script>
 </body>
 </html>
