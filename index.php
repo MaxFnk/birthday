@@ -27,12 +27,11 @@
         </div> 
         
         
-        <a href="#">
+        <a href="#" type="submit">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      <input type="submit">
       Bestätigen
     </a>
     </form>
