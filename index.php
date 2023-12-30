@@ -26,13 +26,12 @@
         <label for="email">Email</label>
         </div> 
         
-        
-        <a href="#" type="submit">
+        <a href="#">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Bestätigen
+      <input type="submit" value=""> Bestätigen
     </a>
     </form>
     </div>
