@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="login-box">
-        <h1>Teilnahmebestätigung</h1>
+        <h2>Max wird 30 - let's go!</h2>
         <form action="submit.php" method="post">
         
         <div class="user-box">
@@ -32,7 +32,8 @@
       <span></span>
       <span></span>
       <span></span>
-      <input type="submit" value="Bestätigen">
+      <input type="submit">
+      Bestätigen
     </a>
     </form>
     </div>
