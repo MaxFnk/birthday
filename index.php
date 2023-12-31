@@ -8,65 +8,17 @@
   </head>
   <body>
     <div class="login-box">
-      <h2>Max wird 30 - let's go!</h2>
-      <p style="color: white; text-align: center;">
-        27.01.2024
-        <br />
-        Lindenstraße 236, 40235 Düsseldorf
-        <br />
-        19 Uhr
-    </p>
-    <p style="color: white">
-    
-        Falls ihr Bock und Zeit habt, sagt gerne direkt zu.
-      </p>
-      <br />
+      <h2>Passwort</h2>
 
-      <form action="submit.php" method="post" oninput="checkEntry()">
-        <div class="user-box">
-          <input type="text" id="vorname" name="vorname" required />
-          <label for="vorname">Vorname</label>
-        </div>
-
-        <div class="user-box">
-          <input type="text" id="nachname" name="nachname" required />
-          <label for="nachname">Nachname</label>
-        </div>
-
-        <div class="user-box">
-          <input type="email" id="email" name="email" required />
-          <label for="email">Email</label>
-        </div>
-        <p id="message" style="color: white"></p>
-        <button type="submit" id="submit-button">Bestätigen</button>
-      </form>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="authenticate.php" method="post">
+            <div class="user-box">
+                <input type="password" name="password" required>
+                <label>Passwort</label>
+            </div>
+            <button type="submit" id="submit-button">Zur Party</button>
+        </form>
     </div>
-    <script>
-        function checkEntry() {
-            var vorname = document.getElementById("vorname").value;
-            var nachname = document.getElementById("nachname").value;
-            var email = document.getElementById("email").value;
-
-            // Überprüfen, ob alle Felder ausgefüllt sind
-            if (vorname && nachname && email) {
-                fetch("check_entry.php", {
-                    method: "POST",
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: `vorname=${vorname}&nachname=${nachname}&email=${email}`
-                })
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("message").innerText = data;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            } else {
-                document.getElementById("message").innerText = ""; // Löscht die Nachricht, wenn nicht alle Felder ausgefüllt sind
-            }
-        }
-    </script>
   </body>
 </html>
