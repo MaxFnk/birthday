@@ -8,8 +8,6 @@
   </head>
   <body>
     <div class="login-box">
-      <h2>Passwort</h2>
-
         <form action="authenticate.php" method="post">
             <div class="user-box">
                 <input type="password" id="password" name="password" required>
