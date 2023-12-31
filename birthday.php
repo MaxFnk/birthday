@@ -32,11 +32,6 @@
           <input type="text" id="nachname" name="nachname" required />
           <label for="nachname">Nachname</label>
         </div>
-
-        <div class="user-box">
-          <input type="text" id="email" name="email" />
-          <label for="email">Wünsche & Ideen</label>
-        </div>
         <button type="submit" id="submit-button">Bestätigen</button>
       </form>
     </div>

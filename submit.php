@@ -25,11 +25,10 @@ if ($conn === false) {
 // Daten aus dem Formular holen
 $vorname = $_POST['vorname'];
 $nachname = $_POST['nachname'];
-$email = $_POST['email'];
 
 // SQL-Befehl vorbereiten und ausführen
-$sql = "INSERT INTO teilnehmer (vorname, nachname, email) VALUES (?, ?, ?)";
-$params = array($vorname, $nachname, $email);
+$sql = "INSERT INTO teilnehmer (vorname, nachname) VALUES (?, ?)";
+$params = array($vorname, $nachname);
 
 $stmt = sqlsrv_query($conn, $sql, $params);
 
