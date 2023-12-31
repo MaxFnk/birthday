@@ -6,27 +6,26 @@ $connectionOptions = array(
     "PWD" => "Gievenbeck1!" // Ihr Passwort
 );
 
-// Verbindung zur Datenbank herstellen
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-
 if ($conn === false) {
     die(print_r(sqlsrv_errors(), true));
 }
 
-$data = json_decode(file_get_contents("php://input"), true);
-$email = $data["email"];
+$vorname = $_POST['vorname'];
+$nachname = $_POST['nachname'];
+$email = $_POST['email'];
 
-$sql = "SELECT email FROM teilnehmer WHERE email = ?";
-$params = array($email);
+$sql = "SELECT * FROM teilnehmer WHERE vorname = ? AND nachname = ? AND email = ?";
+$params = array($vorname, $nachname, $email);
 $stmt = sqlsrv_query($conn, $sql, $params);
 
 if ($stmt === false) {
-    echo "error";
+    echo "Fehler beim Überprüfen der Datenbank.";
 } else {
     if (sqlsrv_fetch($stmt) !== false) {
-        echo "exists";
+        echo "Du hast dich schon angemeldet.";
     } else {
-        echo "not exists";
+        echo "";
     }
 }
 

@@ -6,35 +6,25 @@
     <title>Max wird 30</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script>
-        function checkEmail() {
+        function checkEntry() {
+            var vorname = document.getElementById("vorname").value;
+            var nachname = document.getElementById("nachname").value;
             var email = document.getElementById("email").value;
-            var statusText = document.getElementById("emailStatus");
 
-            if (email) {
-                fetch("check_email.php", {
-                    method: "POST",
-                    body: JSON.stringify({ email: email }),
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                })
-                .then(response => response.text())
-                .then(data => {
-                    if(data === "exists") {
-                        statusText.innerText = "Du hast dich bereits angemeldet.";
-                        statusText.classList.add('error');
-                    } else {
-                        statusText.innerText = "";
-                        statusText.classList.remove('error');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            } else {
-                statusText.innerText = "";
-                statusText.classList.remove('error');
-            }
+            fetch("check_entry.php", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `vorname=${vorname}&nachname=${nachname}&email=${email}`
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("message").innerText = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         }
     </script>
   </head>
@@ -66,10 +56,10 @@
         </div>
 
         <div class="user-box">
-          <input type="email" id="email" name="email" oninput="checkEmail()" required />
+          <input type="email" id="email" name="email" required />
           <label for="email">Email</label>
-          <p id="emailStatus"></p>
         </div>
+        <p id="message"></p>
         <button type="submit" id="submit-button">Bestätigen</button>
       </form>
     </div>
