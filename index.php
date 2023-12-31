@@ -66,7 +66,7 @@
         </div>
 
         <div class="user-box">
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" oninput="checkEmail()" required />
           <label for="email">Email</label>
           <p id="emailStatus"></p>
         </div>
