@@ -25,7 +25,7 @@ if ($stmt === false) {
     if (sqlsrv_fetch($stmt) !== false) {
         echo "Du hast dich schon angemeldet.";
     } else {
-        echo "";
+        echo "Test2";
     }
 }
 
