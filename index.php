@@ -10,11 +10,10 @@
     <div class="login-box">
       <h2>Passwort</h2>
 
-    <div class="login-box">
         <form action="authenticate.php" method="post">
             <div class="user-box">
-                <input type="password" name="password" required>
-                <label>Passowrt</label>
+                <input type="password" id="password" name="password" required>
+                <label for="password">Passwort</label>
             </div>
             <button type="submit" id="submit-button">Zur Party</button>
         </form>
