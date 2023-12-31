@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max wird 30</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter:400,500,600,700&amp;display=swap'>
+  <link rel="stylesheet" href="./layout/cloudfare.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter:400,500,600,700&amp;display=swap'>
 </head>
 <body>
     <div class="login-box">
@@ -46,8 +46,8 @@
 
     </form>
     </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin3.min.js'></script>
-<script  src="birthday\script.js"></script>
+    <script src='./scripts/gsap.min.js'></script>
+  <script src='./scripts/physics.min.js'></script>
+  <script  src="./script.js"></script>
 </body>
 </html>
