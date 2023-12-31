@@ -165,4 +165,21 @@ html {
       bottom: 100%;
     }
   }
-  
+  #submit-button {
+    background-color:  #03e9f4; /* Grüner Hintergrund */
+    color: black; /* Weiße Textfarbe */
+    padding: 15px 32px; /* Polsterung oben/unten und links/rechts */
+    text-align: center; /* Zentrierter Text */
+    text-decoration: none; /* Keine Unterstreichung */
+    display: inline-block; /* Inline-Block-Display */
+    font-size: 16px; /* Schriftgröße */
+    margin: 4px 2px; /* Außenabstand */
+    cursor: pointer; /* Cursor-Stil ändern */
+    border: none; /* Kein Rand */
+    border-radius: 8px; /* Abgerundete Ecken */
+    transition-duration: 0.4s; /* Übergangsdauer für Hover-Effekt */
+}
+
+#submit-button:hover {
+    background-color:  #03e8f4bb; /* Dunklerer Grünton bei Hover */
+}
