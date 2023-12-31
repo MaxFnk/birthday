@@ -183,3 +183,6 @@ html {
 #submit-button:hover {
     background-color:  #03e8f4bb; /* Dunklerer Grünton bei Hover */
 }
+.error {
+  color: red;
+}

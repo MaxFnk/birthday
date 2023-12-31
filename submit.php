@@ -46,7 +46,7 @@ sqlsrv_close($conn);
       <p style="color: white; text-align: center;">
         Ich freu mich auf Dich!
     </p>
-    <img src="./gif/party.gif" alt="Party">
+    <img src="./gif/party.gif" alt="Party" style="max-width: 100%; height: auto;">>
     </div>
   </body>
 </html>
