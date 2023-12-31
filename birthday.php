@@ -34,8 +34,8 @@
         </div>
 
         <div class="user-box">
-          <input type="email" id="email" name="email" required />
-          <label for="email">Email</label>
+          <input type="text" id="email" name="email" />
+          <label for="email">Wünsche & Ideen</label>
         </div>
         <button type="submit" id="submit-button">Bestätigen</button>
       </form>
