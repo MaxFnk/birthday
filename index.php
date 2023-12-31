@@ -11,20 +11,25 @@
             var nachname = document.getElementById("nachname").value;
             var email = document.getElementById("email").value;
 
-            fetch("check_entry.php", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `vorname=${vorname}&nachname=${nachname}&email=${email}`
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("message").innerText = data;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+            // Überprüfen, ob alle Felder ausgefüllt sind
+            if (vorname && nachname && email) {
+                fetch("check_entry.php", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `vorname=${vorname}&nachname=${nachname}&email=${email}`
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("message").innerText = data;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            } else {
+                document.getElementById("message").innerText = ""; // Löscht die Nachricht, wenn nicht alle Felder ausgefüllt sind
+            }
         }
     </script>
   </head>
@@ -59,7 +64,7 @@
           <input type="email" id="email" name="email" required />
           <label for="email">Email</label>
         </div>
-        <p id="message"></p>
+        <p id="message" style="color: white"></p>
         <button type="submit" id="submit-button">Bestätigen</button>
       </form>
     </div>
