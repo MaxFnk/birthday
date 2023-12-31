@@ -42,10 +42,11 @@ sqlsrv_close($conn);
 ?>
 
     <div class="login-box">
-      <h2>Max wird 30 - du bist dabei</h2>
+      <h2>Du bist dabei</h2>
       <p style="color: white; text-align: center;">
         Ich freu mich auf Dich!
     </p>
+    <img src="./gif/party.gif" alt="Party">
     </div>
   </body>
 </html>
