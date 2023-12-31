@@ -15,20 +15,18 @@ $vorname = $_POST['vorname'];
 $nachname = $_POST['nachname'];
 $email = $_POST['email'];
 
-$sql = "SELECT * FROM teilnehmer WHERE vorname = ? AND nachname = ? AND email = ?";
-$params = array($vorname, $nachname, $email);
-$stmt = sqlsrv_query($conn, $sql, $params);
-
-if ($stmt === false) {
-    echo "Fehler beim Überprüfen der Datenbank.";
-} else {
-    if (sqlsrv_fetch($stmt) !== false) {
-        echo "Du hast dich schon angemeldet.";
-    } else {
-        echo "Test2";
+if(isset($email)) {    
+    $sql_email_check = $conn->query("SELECT * FROM teilnehmer WHERE vorname = '$vorname' AND nachname = '$nachname' AND email = '$email'");    
+    $email_check = $sql_email_check->num_rows;    
+  
+    if ($email_check == 0) {
+      echo '';  
+      return; 
+      } 
+    else 
+    {
+      echo 'Du hast dich schon angemeldet.';
+      return;    
     }
-}
-
-sqlsrv_free_stmt($stmt);
-sqlsrv_close($conn);
+  }
 ?>
