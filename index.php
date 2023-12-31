@@ -44,7 +44,7 @@
       </p>
       <br />
 
-      <form action="submit.php" method="post">
+      <form action="submit.php" method="post" oninput="checkEntry()">
         <div class="user-box">
           <input type="text" id="vorname" name="vorname" required />
           <label for="vorname">Vorname</label>
