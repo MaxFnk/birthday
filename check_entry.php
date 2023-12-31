@@ -20,7 +20,7 @@ if(isset($email)) {
     $email_check = $sql_email_check->num_rows;    
   
     if ($email_check == 0) {
-      echo '';  
+      echo 'Noch nicht angemeldet.';  
       return; 
       } 
     else 
